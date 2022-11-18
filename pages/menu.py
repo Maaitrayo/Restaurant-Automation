@@ -25,3 +25,5 @@ if st.button("Select"):
 
     for food in food_item_list:
         st.write(food)
+    
+    
