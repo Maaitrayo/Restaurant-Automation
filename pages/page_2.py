@@ -5,7 +5,7 @@ from PIL import Image
 st.markdown("Select food testing")
 st.sidebar.markdown("# Menue 🎉")
 
-foods = pd.read_csv(r".\data\food_data.csv")
+foods = pd.read_csv("data/food_data.csv")
 food_item = st.selectbox(
     'How would you like to be contacted?',
     foods['name'].values)
@@ -17,9 +17,9 @@ if st.button("Select"):
 
     if food_item == "pizza":
         name = "pizza"
-        image_loc = r"./images\pizza/"
+        image_loc = "images\pizza/"
     elif food_item == "burger":
-        image_loc = r"./images\burger/"
+        image_loc = "images/burger/"
         name = "burger"
 
     col1, col2, col3, col4 = st.columns(4)
