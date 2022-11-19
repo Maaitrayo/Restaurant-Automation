@@ -4,3 +4,5 @@ login_data = {"Hrishabh" : 12345,
               }
 
 cart_details = {}
+
+chat_data = {}
