@@ -50,9 +50,7 @@ if __name__ == "__main__":
     name = food_item
     image_loc = f"images/{name}/"
     cart_details = selectFoodItems(cart_details)
-    # sum = calculateTotalPrice(cart_details)
-    # st.write(cart_details)
-    # st.write("Total Sum = ", sum)
+
    
     
     
