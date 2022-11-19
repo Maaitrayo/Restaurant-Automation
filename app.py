@@ -15,12 +15,12 @@ def validLoginID(login_ID, password):
         status = "[!] Invalid login ID [!] "
     return status
 
-def createUserAccount(new_loginID, new_password):
-    user = new_loginID
-    password = new_password
-    if (user!="" and password!=""):
-        login_data[user] = password
-    print(" User Registered ")
+# def createUserAccount(new_loginID, new_password):
+#     user = new_loginID
+#     password = new_password
+#     if (user!="" and password!=""):
+#         login_data[user] = password
+#     print(" User Registered ")
 
 
 st.title('Restaurent Management System')
