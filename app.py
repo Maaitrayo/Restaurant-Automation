@@ -1,5 +1,6 @@
 import streamlit as st
 from data.data import login_data
+from data.data import access_req
 
 def checkPassword(login_ID,password):
     if(login_data[login_ID] == password):
@@ -15,13 +16,6 @@ def validLoginID(login_ID, password):
         status = "[!] Invalid login ID [!] "
     return status
 
-# def createUserAccount(new_loginID, new_password):
-#     user = new_loginID
-#     password = new_password
-#     if (user!="" and password!=""):
-#         login_data[user] = password
-#     print(" User Registered ")
-
 
 st.title('Restaurent Management System')
 st.markdown("# Login")
@@ -29,8 +23,15 @@ st.markdown("# Login")
 userID = st.text_input('User Id')
 password = st.text_input('Password')
 
-if st.button('Submit'):
-    login_ID = userID   
-    password = int(password)
-    status = validLoginID(login_ID, password)
-    st.write(f"{status}")
+def secureInfo(userID, password):
+    if st.button('Submit'):
+        login_ID = userID   
+        password = int(password)
+        status = validLoginID(login_ID, password)
+        st.write(f"{status}")
+        if status == " Login Successful ":
+            access_req["VALIDITY"] = "VALID"
+        return status
+
+if __name__ == "__main__"   :
+    secureInfo(userID, password)

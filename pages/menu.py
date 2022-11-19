@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 from PIL import Image
-from data.data import cart_details
+from data.data import cart_details, access_req
 
 
 st.markdown("Select food testing")
@@ -48,8 +48,11 @@ def selectFoodItems(cart_details):
 
 if __name__ == "__main__":
     name = food_item
-    image_loc = f"images/{name}/"
-    cart_details = selectFoodItems(cart_details)
+    if access_req["VALIDITY"] == "VALID":
+        image_loc = f"images/{name}/"
+        cart_details = selectFoodItems(cart_details)
+    else:
+        st.write("[!] Login First [!]" )
 
    
     

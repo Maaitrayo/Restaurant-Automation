@@ -1,12 +1,13 @@
 import streamlit as st
 import datetime
+from data.data import access_req
 
 
 
 from data.data import chat_data
 
 
-st.markdown("Welcome to your cart")
+st.markdown("Welcome to your Global Chat")
 st.sidebar.markdown(f"Global Chat 🎉")
 
 userName = st.text_input('User Id')
@@ -30,5 +31,9 @@ def chatInterface():
     return chat_data
 
 if __name__ == "__main__":
-    chatInterface()
-    st.write(chat_data)
+    if access_req["VALIDITY"] == "VALID":
+        chatInterface()
+        st.write(chat_data)
+    else:
+        st.write("[!] Login First [!]" )
+
