@@ -18,7 +18,7 @@ def calculateTotalPrice(cart_details):
 if __name__ == "__main__":
     sum = calculateTotalPrice(cart_details)
     if st.button("Clear Cart"):
-        cart_details = {}
+        cart_details.clear()
         sum = 0
     st.write(cart_details)
     st.write("Total Sum = ", sum)
