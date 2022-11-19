@@ -31,6 +31,9 @@ def secureInfo(userID, password):
         st.write(f"{status}")
         if status == " Login Successful ":
             access_req["VALIDITY"] = "VALID"
+        else:
+            access_req["VALIDITY"] = "NOT VALID"
+
         return status
 
 if __name__ == "__main__"   :
