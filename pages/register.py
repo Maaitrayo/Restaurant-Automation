@@ -1,7 +1,7 @@
 import streamlit as st
 from data.data import login_data
 
-st.markdown("# Login")
+st.markdown("# Register")
 
 userID = st.text_input('User Id')
 password = st.text_input('Password')
