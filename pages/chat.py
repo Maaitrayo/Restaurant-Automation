@@ -33,10 +33,11 @@ def checkAdmin():
 
 def chatInterface():
     clear = st.button("Clear Chat", key=1)
-    if clear and checkAdmin():
-        chat_data.clear()
-    else:
-        st.write("Only for admins")
+    if clear:
+        if checkAdmin():
+            chat_data.clear()
+        else:
+            st.write("Only for admins")
 
     publish = st.button("Publish")
     if publish:
