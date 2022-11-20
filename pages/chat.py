@@ -25,10 +25,12 @@ message = st.text_input('Message')
 #     chat_data[userName] = message
 
 def chatInterface():
-    # for names in current_user:
-    #     if names in ["Maaitrayo", "Hrittik", "koushik", "Hrishabh"]:
+    admin = False
+    for names in current_user:
+        if names in ["Maaitrayo", "Hrittik", "koushik", "Hrishabh"]:
+            admin = True
     clear = st.button("Clear Chat", key=1)
-    if clear:
+    if clear and admin:
         chat_data.clear()
 
     publish = st.button("Publish")
