@@ -16,6 +16,5 @@ def createUserAccount(new_loginID, new_password):
 
 if st.button('Register'):
     login_ID = userID   
-    password = int(password)
     status = createUserAccount(login_ID, password)
     st.write(f"{status}")
