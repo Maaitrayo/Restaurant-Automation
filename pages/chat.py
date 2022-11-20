@@ -26,9 +26,9 @@ message = st.text_input('Message')
 
 def checkAdmin():
     admin = False
-    for names in current_user:
-        if names in ["Maaitrayo", "Hrittik", "koushik", "Hrishabh"]:
-            admin = True
+    # for names in current_user:
+    if current_user[-1] in ["Maaitrayo", "Hrittik", "koushik", "Hrishabh"]:
+        admin = True
     return admin
 
 def chatInterface():
