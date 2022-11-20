@@ -24,14 +24,19 @@ message = st.text_input('Message')
 # if userName != "" and message != "":
 #     chat_data[userName] = message
 
-def chatInterface():
+def checkAdmin():
     admin = False
     for names in current_user:
         if names in ["Maaitrayo", "Hrittik", "koushik", "Hrishabh"]:
             admin = True
+    return admin
+
+def chatInterface():
     clear = st.button("Clear Chat", key=1)
-    if clear and admin:
+    if clear and checkAdmin():
         chat_data.clear()
+    else:
+        st.write("Only for admins")
 
     publish = st.button("Publish")
     if publish:
