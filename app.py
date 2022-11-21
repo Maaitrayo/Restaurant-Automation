@@ -49,7 +49,8 @@ if __name__ == "__main__"   :
     secureInfo(userID, password)
     if st.button("Logout"):
         access_req["VALIDITY"] = "NOT VALID"
-        if len(current_user)!=0:
+        if len(current_user)!=0 and  len(userIP_check)!=0:
             current_user.pop()
+            userIP_check.pop()
 
     st.write(userIP_check)
