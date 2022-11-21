@@ -51,6 +51,6 @@ if __name__ == "__main__"   :
         access_req["VALIDITY"] = "NOT VALID"
         if len(current_user)!=0 and  len(userIP_check)!=0:
             current_user.pop()
-            userIP_check.pop()
+            userIP_check.popitem()
 
     st.write(userIP_check)
