@@ -1,4 +1,4 @@
 # Restaurant-Automation
-Software Engineering Project - Fucking headache,
+Software Engineering Project 
 
 streamlit run app.py
